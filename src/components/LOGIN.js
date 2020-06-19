@@ -75,6 +75,7 @@ const LOGIN = () => {
                 setShowSnackBar(true)
             });
         }catch(err){
+            console.log(err)
             setSnackBarMessage('Error occurred please try again later!');
             setShowSnackBar(true)
         }
