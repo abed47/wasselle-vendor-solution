@@ -1,0 +1,51 @@
+.login{
+    &__container{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #79c4f0;
+    }
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+        width: 400px;
+        background-color: #fafafa;
+        border-radius: 11px;
+        box-shadow: 1px 3px 7px rgba($color: #000000, $alpha: 0.4);
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.form{
+    &__logo{
+        width: 25%;
+        margin: 10px;
+        padding: 0;
+    }
+
+    &__username{
+        margin: 15px !important;
+    }
+
+    &__password{
+        margin: 15px !important;
+    }
+
+    &__btn{
+        margin: 15px !important;
+    }
+
+    &__forgot_username{
+        font-size: 0.8rem;
+        color: grey;
+
+        &:hover{
+            color: rgb(52, 52, 202);
+        }
+    }
+
+}

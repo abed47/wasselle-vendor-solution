@@ -1,25 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {lazy, Suspense} from 'react';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {ThemeProvider, createMuiTheme} from '@material-ui/core/styles';
+import './App.scss';
+
+import MainContextProvider from './Context';
+const Login = lazy(() => import('./components/LOGIN.js'));
+const Home = lazy(() => import('./components/HOME.js'));
+const Items = lazy(() => import('./components/ITEMS.js'));
+
+const theme = createMuiTheme({
+  palette:{
+    primary: {
+      main: "#79c4f0"
+    }
+  }
+})
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense fallback={null}>
+      <Router>
+        <Switch>
+          <ThemeProvider theme={theme}>
+            <MainContextProvider>
+              <Route path="/login" component={Login}/>
+              <Route exact path="/" component={Home} />
+            </MainContextProvider>
+          </ThemeProvider>
+        </Switch>
+      </Router>
+    </Suspense>
   );
 }
 
