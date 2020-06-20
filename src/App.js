@@ -7,6 +7,7 @@ import MainContextProvider from './Context';
 const Login = lazy(() => import('./components/LOGIN.js'));
 const Home = lazy(() => import('./components/HOME.js'));
 const Items = lazy(() => import('./components/ITEMS.js'));
+const Dashboard = lazy(() => import('./components/DASHBOARD.js'));
 
 const theme = createMuiTheme({
   palette:{
@@ -23,8 +24,8 @@ function App() {
         <Switch>
           <ThemeProvider theme={theme}>
             <MainContextProvider>
-              <Route path="/login" component={Login}/>
-              <Route exact path="/" component={Home} />
+              <Route exact path="/login" component={Login}/>
+              <Route  path="/" component={Home} />
             </MainContextProvider>
           </ThemeProvider>
         </Switch>

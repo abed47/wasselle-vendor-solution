@@ -1,10 +1,12 @@
 import React,{useEffect, useContext, useState} from 'react';
 import {Redirect} from 'react-router-dom';
 import {MainContext} from './../Context';
+import NAVBAR from './NAVBAR';
 
-const HOME = () => {
+const HOME = (props) => {
 
     const [toLogin, setToLogin] = useState(false);
+    const [currentPage, setCurrentPage] = useState("dashboard");
 
     const context = useContext(MainContext);
 
@@ -19,10 +21,13 @@ const HOME = () => {
     return(
         <div className="home__container">
             {
-                toLogin ?  (<Redirect to="/login" push={true}/>) : null
+                //TODO: remove commented code
+                //toLogin ?  (<Redirect to="/login" push={true}/>) : null
             }
+
+            <NAVBAR className="navbar__component" />
             home
-            <button onClick={() => console.log(user)} >click</button>
+            <button onClick={() => console.log(props)} >click</button>
         </div>
     )
 }

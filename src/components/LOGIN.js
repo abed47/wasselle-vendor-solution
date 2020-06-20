@@ -28,9 +28,9 @@ const LOGIN = () => {
 
 
     useEffect(
-        () => {if(localStorage.getItem('user')){
-            setAllowed(true)
-        }}, [allowed]
+        () => {
+            console.log(context.user)
+    }, [allowed]
     )
 
     const handleKeyPress = (e) => {

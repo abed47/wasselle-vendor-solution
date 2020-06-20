@@ -1,4 +1,8 @@
+@import './styles/variables';
 @import './styles/login.scss';
+@import './styles/dashboard.scss';
+@import './styles/home.scss';
+@import './styles/navbar.scss';
 
 html,body,#root{
     height: 100%;
