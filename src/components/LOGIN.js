@@ -29,7 +29,9 @@ const LOGIN = () => {
 
     useEffect(
         () => {
-            console.log(context.user)
+            if(user.id){
+                setAllowed(true)
+            }
     }, [allowed]
     )
 

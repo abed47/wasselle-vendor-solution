@@ -1,10 +1,44 @@
 .navbar{
     &__container{
+        width: 100%;
+        height: 100%;
+    }
+
+    &__links_container{
         display: inline-flex;
-        flex-direction: column;
+        justify-content: center;
         width: 20%;
         height: 100%;
-        justify-items: center;
-        align-items: center;
+        border-left: 1px solid grey inset;
+        background-color: $color_primary;
+
+        ul{
+            list-style: none;
+            padding: 0;
+            justify-content: center;
+            text-align: center;
+
+            li{
+                margin: 5px 0px;
+                padding: 3px;
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+
+                &.active{
+                    border-radius: 7px;
+                    border: 1px solid white;
+                }
+            }
+        }
     }
+
+    &__rendered_components{
+        display: inline-flex;
+        width: 80%;
+        height: 100%;
+    }
+
+
 }

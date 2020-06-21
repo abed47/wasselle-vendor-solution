@@ -15,6 +15,8 @@ const HOME = (props) => {
     useEffect(() => {
         if(!user.id){
            setToLogin(true);
+        }else{
+            setToLogin(false)
         }
     },[user])
     
@@ -24,8 +26,6 @@ const HOME = (props) => {
                 //TODO: remove commented code
                 //toLogin ?  (<Redirect to="/login" push={true}/>) : null
             }
-
-            <NAVBAR className="navbar__component" />
             home
             <button onClick={() => console.log(props)} >click</button>
         </div>
