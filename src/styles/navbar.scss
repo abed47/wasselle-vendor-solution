@@ -2,9 +2,14 @@
     &__container{
         width: 100%;
         height: 100%;
+        margin: 0px;
+        display: flex;
+        justify-content: start;
+        align-items: flex-start;
     }
 
     &__links_container{
+        margin: 0px;
         display: inline-flex;
         justify-content: center;
         width: 20%;
@@ -35,9 +40,10 @@
     }
 
     &__rendered_components{
-        display: inline-flex;
+        display: inline-block;
         width: 80%;
         height: 100%;
+        margin: 0px;
     }
 
 

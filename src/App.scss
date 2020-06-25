@@ -3,7 +3,10 @@
 @import './styles/dashboard.scss';
 @import './styles/home.scss';
 @import './styles/navbar.scss';
+@import './styles/items.scss';
 
 html,body,#root{
+    margin: 0px;
+    padding: 0px;
     height: 100%;
 }
